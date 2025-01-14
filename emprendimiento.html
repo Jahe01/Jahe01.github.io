@@ -16,7 +16,7 @@
             background-color: #f9f9f9;
             color: #333;
             margin: 0;
-            font-size: 24px;
+            font-size: 18px;
             padding: 0;
         }
         header {
@@ -24,6 +24,12 @@
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
+        }
+        header img {
+            width: 10vw; /* Ajusta el tamaño de la imagen basado en el ancho de la pantalla */
+            max-width: 80px; /* Límite máximo */
+            height: auto;
+            border-radius: 50%;
         }
         .container {
             width: 90%;
@@ -45,7 +51,7 @@
             border-radius: 10px;
         }
         table {
-            width: 100%;
+            width: 98%;
             border-collapse: collapse;
             margin-top: 20px;
             margin: auto;
@@ -53,6 +59,7 @@
             background: #ffffff;
             font-family: "Roboto Mono", serif;
             font-optical-sizing: auto;
+            display: block; 
         }
         th, td {
             padding: 15px;
@@ -118,24 +125,64 @@
             padding: 15px 0;
             margin-top: 40px;
             font-size: 0.9rem;
-            font-size: 19px;
+            font-size: 14px;
         }
-        @media screen and (max-width: 480px) {
-            header h1 {
-                font-size: 1.3rem;
-            }
-            table th, table td {
-                font-size: 0.8rem;
-                padding: 5px;
-            }
-            td img {
-                width: 80px;
-                height: 80px;
-            }
-            iframe {
-                height: 200px;
-            }
+        /* Media Queries para anchos específicos */
+    @media (max-width: 1024px) {
+        .container {
+            padding: 10px; /* Reducir el margen en dispositivos más pequeños */
         }
+
+        table {
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+
+        h1, h2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: 16px;
+        }
+
+        header img {
+            width: 15vw;
+            max-width: 60px; /* Reducir límite máximo */
+        }
+
+        h1, h2 {
+            font-size: 1.5rem;
+        }
+
+        th, td {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            font-size: 14px;
+        }
+
+        header h1 {
+            font-size: 1.3rem;
+        }
+
+        th, td {
+            font-size: 0.7rem;
+            padding: 5px;
+        }
+
+        td img {
+            width: 70px; /* Imágenes más pequeñas */
+        }
+    }
         
     </style>
 </head>
